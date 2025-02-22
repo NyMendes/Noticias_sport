@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <title>Site de Esportes</title>
+ <style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --dark:#000;
+  --dark1: #0f1112;
+  --dark2: #121214;
+  --dark3: #202024;
+  --dark4: #28272c;
+  --dark5: #505050;
+  --light: #fff;
+  --light1: #fbf9f9;
+  --light2: #f8f7fa;
+  --light3: #F2F2F2;
+  --light4: #dcdcdc;
+  --colorPrincipal:#023373;  /* #0c0b20 */
+  --corButton-1: #2C7BBF; /*#007bff;*/
+  --corButton-2: #29A678 ;/*#28a745;*/
+  --corButton-3: #F2D541; /*#ffc107;*/
+  /* FONTS */
+  --font-Poppins: "Poppins", sans-serif; 
+  --font-Roboto: "Roboto", sans-serif;;
+  --font-Sans1: "Noto Sans", sans-serif;
+  --font-Sans2: "Open Sans", sans-serif;
+  --font-Sans3: "DM Sans", sans-serif;
+  --font-Montserrat: "Montserrat", sans-serif;
+  --font-Lato: "Lato", sans-serif;
+  --font-Inter: "Inter", sans-serif;
+  --font-Raleway: "Raleway", sans-serif;
+  --font-Rubik: "Rubik", sans-serif;
+} /* Estilos CSS para a página */
+body {
+  font-family: var(--font-Raleway);
+  margin: 0;
+  padding: 0;
+ box-sizing: border-box; 
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+h1, h2, h3, p{
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER ----------------------------------------------------------------------------------- */
+header {
+  width: 100%;
+  top: 0;
+  background-color: var(--colorPrincipal);
+  color: #fff;
+  padding: 0;
+  /* display: flex; */
+  justify-content: space-between; /* Alinha os elementos à esquerda e à direita */
+  align-items: center; /*Alinha os elementos verticalmente;*/
+  box-shadow: 1 1px 2px rgb(0, 0, 0, 0.2);
+}
+
+.right-align {
+  height: 100%;
+  width: 100%;
+  background-color: #2C7BBF;
+  padding:0 2rem ;
+}
+nav ul {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+  padding: 0.3rem 0.6rem ;
+  /* overflow: hidden; */
+  margin: 0;
+}
+
+nav ul li {
+  height: 100%;
+  width: 100%;
+  display: inline;
+ 
+  margin-right: 20px;
+}
+
+nav ul li .nav-link {
+  height: 100%;
+  width: 100%;
+  padding: 0.6rem 0.6rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  color: #fff;
+  text-decoration: none;
+}
+nav ul li .nav-link:hover {
+  background-color: #023373;
+}
+main {
+    /* background: #ececec; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* position: absolute; */
+    /* overflow: hidden; */
+}
+
+.assinar {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* Estilos de contraste */
+.high-contrast {
+  background-color: var(--dark);
+  color: #fff;
+}
+
+.black-and-white {
+  background-color: var(--light);
+  color: #000;
+}
+
+.blue-contrast {
+  background-color: var(--corButton-1);
+  color: #fff;
+}
+
+.green-contrast {
+  background-color: var(--corButton-2);
+  color: #fff;
+}
+
+.yellow-contrast {
+  background-color: var(--corButton-3);
+  color: #000;
+}
+
+/* Estilos para alinhar a navegação à direita */
+.boxCores{
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.ButtonCor{
+  /* margin: auto; */
+  padding-right: 4rem;
+  margin-left: auto; /*Empurra a navegação para a direita */
+    /* position: absolute;
+    top: 30px;
+    right: 50%;
+    transform: translate(50%, 0); */
+}
+.bt-cor{
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size:12px;
+  opacity: 0.8;
+  font-weight: 600;
+  font-family: var(--font-Poppins);
+  font-style: normal;
+}
+.bt-cor:hover{
+opacity: 1;
+}
+.amarelo{
+  background-color: var(--corButton-3);
+}
+.verde{
+  background-color: var(--corButton-2);
+}
+.azul{
+  background-color: var(--corButton-1);
+
+}
+.contraste{
+  background-color: var(--dark);
+  color: var(--light);
+}
+.normal{
+  background-color: var(--light);
+  color: var(--dark);
+  /* border-color: var(--dark); */
+}
+
+.titulo{
+  padding: 1rem 3rem ;
+}
+.destaque{
+  width: 70%;
+  max-width: 1400px;
+  padding: 1.5rem 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.destaque > h1{
+  position: absolute;
+  z-index: 3;
+    color: var(--light) ;
+    margin:2rem ;
+    font-weight: 700;
+    font-size: 5rem;
+    white-space: nowrap;
+}
+.dest-img{
+  margin: auto;
+  width:100%;
+  overflow: hidden;
+  height: 15rem;
+  border-radius: 10px;
+  box-shadow: rgb(25 31 40 / 30%) 0px 6px 24px 0px;
+    position: relative;
+    background-color:var(--colorPrincipal);
+    display: inline-block;
+    transition: border-radius 0.3s ease-in-out 0s;
+}
+.dest-img > img{
+  width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    image-rendering: unset;
+    opacity: 0.5;
+    z-index: 2;
+}
+.group-article{
+  padding: 2rem 0;
+}
+.flex{
+display: flex;
+/* align-items: center; */
+justify-content: space-between;
+gap: 1rem;
+flex-direction: row;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 3rem 2rem;
+}
+.post{
+  /* background-color: var(--light3); */
+  /* background-color: var(--light2); */
+  /* box-shadow: rgb(25 31 40 / 30%) 0px 6px 24px 0px; */
+   /* box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.2); */
+   /* box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 10%); */
+  /* border-radius: 12px; */
+  /* border: 2px solid var(--light2); */
+   /* flex-direction: column; */
+  /* align-items: center;*/
+   /* min-height: 20rem; */
+  /*justify-content: center; */
+  /* display: flex; */
+  width: calc(33.33% - 20px);
+  position: relative;
+  padding-bottom: 2.6rem;
+  box-sizing: border-box;
+  text-align: center;
+  height: fit-content;
+  overflow: hidden;
+
+}
+.post-link{
+  text-decoration: none;
+  color: var(--dark1); 
+}
+ .post-link:hover {
+  /* background-color: var(--light3); */
+  color: var(--corButton-1);
+  /* box-shadow: rgb(25 31 40 / 30%) 0px 6px 24px 0px; */
+}
+.post-img{
+  width: 100%;
+  height: 200px;
+}
+  .post-img> img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* image-rendering: unset; */
+  }
+.post-text{
+  padding: 1rem ;
+  display: flex;
+  text-align:left;
+  white-space: unset;
+  flex-direction: column;
+  gap: 0.3rem;
+  }
+.post-link > h3{
+    /* color: var(--dark1); */
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+.post-link > p{
+    /* color: var(--dark4); */
+    font-size: 14px;
+    font-weight: 400;
+  }
+.postText-link{
+  text-decoration: none;
+  margin-top: 0.5rem;
+  width: 5rem;
+  padding: 0.2rem 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--dark5);
+  color: var(--dark5);
+  transition: 2all;
+  }
+  .postText-link:hover{
+    background-color: var(--dark5);
+    color: var(--light1);
+  }
+  .postText-link > span{
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .bt-vision{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  border-radius: 4px;
+  height: 50px;
+  padding:10px 20px;
+  background-image: linear-gradient(86deg, #2977F3, #4F2CD2);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 14px;
+  }
+.hidden {
+  display: none;
+}
+.conteiner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.area { 
+  width: 54rem;
+  height: 20rem;
+  position: relative;
+  background-color: var(--corButton-2);
+  box-shadow: 10px 10px 15px 5px rgba(0,0,0,0.2);
+  margin: 3rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+.mensagem{
+  margin-left: 4rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mensagem h2 {
+  font-size: 2.3rem;
+  text-decoration: none;
+  color: var(--light);
+}
+.mensagem span {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--light);
+}
+.box-input {
+  position: absolute;
+  width: 18rem;
+  height: 15rem;
+  top: 50%;
+  right: 0;
+  transform: translate( 40%, -50%);
+  box-shadow: rgb(25 31 40 / 30%) 0px 6px 24px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--light4);
+
+  /* border-radius: 10px; */
+  padding: 0 2.5rem;
+  /* margin: 1rem 0; */
+  /* align-items: center; */
+  /* height: min-content; */
+}
+.box-input > input{
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 2px solid var(--colorPrincipal);
+  border-radius: 6px;
+  /* background: transparent; */
+}
+.box-input > label {
+  font-size: 1.4rem;
+  width: 100%;
+  font-weight: 600;
+  color: var(--dark1);
+}
+
+.bt-enviar {
+  float: right;
+  padding: 0.6rem 0;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-color: var(--colorPrincipal);
+  color: #fff;
+}
+.contentTop{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.content{
+  width: 70%;
+  max-width: 1400px;
+  margin: auto; 
+  padding: 1rem 3rem; 
+}
+.bt-mais {
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: var(--colorPrincipal);
+  font-weight: 500;
+  font-size: 1rem;
+  border-bottom: 2px solid transparent;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%,0); 
+  /* margin-top: 1rem ; */
+}
+.bt-mais:hover{
+/* text-decoration: underline; */
+border-bottom: 2px solid var(--colorPrincipal);
+}
+.text-mais{
+  padding: 0 1rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+/* FOOTER ----------------------------------------------------------------------------- */
+footer {
+  background-color: var(--colorPrincipal);
+  color: #fff;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}
+
+ </style>
+</head>
+<body>
+    <header>
+        <!-- Regra 2: Não altere a semântica de elementos nativos do HTML -->
+        <h1 class="titulo">Site de Esportes</h1>
+        <nav class="right-align">
+        <ul>
+            <li><a href="https://www.uol.com.br/esporte/" class="nav-link" target="_blank">Uol</a></li>
+            <li><a href="https://www.uol.com.br/esporte/ultimas/" class="nav-link" target="_blank">Esporte</a></li>
+            <li><a href="https://www.uol.com.br/esporte/futebol/central-de-jogos/#/27-03-2024" class="nav-link" target="_blank">Hoje</a></li>
+        </ul>
+        </nav>
+    </header>
+    <div class="boxCores">
+        <div class="ButtonCor" id="contrastOptions">
+        <button class="bt-cor normal" id="blackAndWhite">Preto e Branco</button>
+        <button class="bt-cor contraste" id="highContrast">Alto Contraste</button>
+        <button class="bt-cor azul" id="blueContrast">Azul</button>
+        <button class="bt-cor verde" id="greenContrast">Verde</button>
+        <button class="bt-cor amarelo" id="yellowContrast">Amarelo</button>
+        </div>
+    </div>
+    <main>
+        <div class="conteiner"> 
+            <div class="contentTop"> 
+                <div class="destaque">
+                <h1>Noticias</h1>
+                <div class="dest-img" >
+                    <img 
+                    src="https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">  
+                </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2>Ultimas Noticias</h2>  
+                <div class="group-article flex">
+                    <article class="post">
+                        <a href="https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/03/27/dorival-pegou-terra-arrasada-e-fez-a-selecao-ter-comprometimento-diz-casao.htm" class="post-link" target="_blank">
+                            <div class="post-img" >
+                            <img src="https://mundorubronegro.com/wp-content/uploads/2022/08/52259902449_ef2747ab83_c.jpg" alt="">
+                            </div>
+                            <div class="post-text">
+                            <h3>Dorival pegou terra arrasada e fez a seleção ter comprometimento, diz Casão.</h3>
+                            <!-- <p>Descrição da notícia...</p> -->
+                            </div>
+                        </a>
+                        <div class="post-mais">
+                            <button class="bt-mais" onclick="toggleVisibility('section1')">
+                              <p>Leia Mais</p>
+                            </button>
+                            <div class="text-mais hidden" id="section1">
+                              <p>O colunista Walter Casagrande destacou no UOL News Esporte que Dorival Jr já mudou a cara da seleção brasileira em apenas dois jogos. Para Casão, o treinador pegou "terra arrasada" dos antecessores e devolveu organização e comprometimento à equipe canarinha.</p>
+                            </div>
+                        </div>
+                    </article> 
+                    <article class="post">
+                        <a href="https://www.uol.com.br/esporte/ultimas-noticias/agencia/2024/03/27/eurocopa-2024-veja-como-ficaram-os-grupos-apos-o-fim-da-repescagem.htm" class="post-link"  target="_blank">
+                            <div class="post-img" >
+                            <img src="https://s2-techtudo.glbimg.com/wBYy7Fn09G6wOIa7VLDPQOeBjyM=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/e/m/n7P4xeTBii0loiYDHoBA/ea-sports-fc-24-torneio-campeonato-uefa-euro-2024-eurocopa-gratis.jpg" alt="">
+                            </div>
+                            <div class="post-text">
+                            <h3>Eurocopa 2024: veja como ficaram os grupos após o fim da repescagem.</h3>
+                            <!-- <p>Descrição da notícia...</p> -->
+                            </div>
+                        </a>
+                        <div class="post-mais">
+                            <button class="bt-mais" onclick="toggleVisibility('section2')">
+                              <p>Leia Mais</p>
+                            </button>
+                            <div class="text-mais hidden" id="section2">
+                              <p>Estão definidos os grupos da Eurocopa deste ano. O torneio tem a Alemanha como país-sede nesta edição e teve os últimos classificados definidos após os jogos da repescagem disputados ontem (27). Três vagas estavam em disputa e acabaram com Geórgia, Ucrânia e Polônia.</p>
+                            </div>
+                        </div>
+                    </article> 
+                    <article class="post">
+                        <a href="https://www.uol.com.br/esporte/futebol/ultimas-noticias/2024/03/27/boavista-x-botafogo-horario-e-onde-assistir-a-final-da-taca-rio.htm" class="post-link"  target="_blank">
+                            <div class="post-img" >
+                            <img src="https://www.tupi.fm/wp-content/uploads/2024/03/53485904690-9a0888c013-o-scaled-1.jpg" alt="">
+                            </div>
+                            <div class="post-text">
+                            <h3>Boavista x Botafogo: horário e onde assistir à final da Taça Rio</h3>
+                            <!-- <p>Descrição da notícia...</p> -->
+                            </div>
+                        </a>
+                        <div class="post-mais">
+                            <button class="bt-mais" onclick="toggleVisibility('section3')">
+                              <p>Leia Mais</p>
+                            </button>
+                            <div class="text-mais hidden" id="section3">
+                              <p>Boavista e Botafogo se enfrentam hoje (27), no Elcyr Resende, pelo primeiro jogo da final da Taça Rio. O torneio é disputado entre os times que ficaram da quinta à oitava colocação no primeiro turno do Carioca.</p>
+                            </div>
+                        </div>
+                    </article> 
+                </div>
+            </div>
+        </div>
+        <div class="conteiner">
+          <div class="area">
+            <div class="box-mensagem">
+              <div class="mensagem">
+                <h2>Newsletter do Sports na Tela</h2>
+                <span>Assine nossa newsletter e receba diariamente as notícias mais relevantes do Mundo dos Esportes</span>
+              </div>
+            </div>
+           
+              <div class="box-input" id="assinar">
+                  <!-- Regra 5: Todos os elementos devem ter um nome acessível -->
+                  <label for="newsletter">Assine nossa newsletter:</label>
+                  <input type="email" id="newsletter" placeholder="Digite seu email">
+                  <button  onclick="showAlert()" class="bt-enviar" type="submit">Assinar</button>
+              </div>
+          </div>
+        </div>
+    </main>
+
+  <footer>
+    <p>© 2024 - Site de Esportes. Desenvolvido por Nicoly Cristina</p>
+  </footer>
+
+  <script>
+    function showAlert() {
+    alert('Assinatura Confirmada!');
+  }
+    function toggleVisibility(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section.style.display === 'none' || section.style.display === '') {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  }
+    const blackAndWhiteBtn = document.getElementById('blackAndWhite');
+    const highContrastBtn = document.getElementById('highContrast');
+    const blueContrastBtn = document.getElementById('blueContrast');
+    const greenContrastBtn = document.getElementById('greenContrast');
+    const yellowContrastBtn = document.getElementById('yellowContrast');
+
+    
+
+    blackAndWhiteBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'blue-contrast', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('black-and-white');
+    });
+
+    highContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('black-and-white', 'blue-contrast', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('high-contrast');
+    });
+
+    blueContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'green-contrast', 'yellow-contrast');
+      document.body.classList.add('blue-contrast');
+    });
+
+    greenContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'blue-contrast', 'yellow-contrast');
+      document.body.classList.add('green-contrast');
+    });
+
+    yellowContrastBtn.addEventListener('click', function() {
+      document.body.classList.remove('high-contrast', 'black-and-white', 'blue-contrast', 'green-contrast');
+      document.body.classList.add('yellow-contrast');
+    });
+
+    // Função para mostrar/ocultar seções
+
+  </script>
+
+</body>
+</html>
